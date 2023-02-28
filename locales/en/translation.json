@@ -1,0 +1,23 @@
+{
+  "header_home": "Home",
+  "header_news": "News",
+  "header_profile": "Profile",
+  "header_login": "Login",
+  "header_logout": "Logout",
+  "login_username": "Username",
+  "login_password": "Password",
+  "login_error": "Invalid Username or Password",
+  "home_title": "History of cryptocurrency",
+  "home_body": "A cryptocurrency, crypto-currency, or crypto is a digital currency designed to work as a medium of exchange through a computer network that is not reliant on any central authority, such as a government or bank, to uphold or maintain it. It is a decentralized system for verifying that the parties to a transaction have the money they claim to have, eliminating the need for traditional intermediaries, such as banks, when funds are being transferred between two entities. Individual coin ownership records are stored in a digital ledger, which is a computerized database using strong cryptography to secure transaction records, control the creation of additional coins, and verify the transfer of coin ownership. Despite their name, cryptocurrencies are not considered to be currencies in the traditional sense. While varying treatments have been applied to them, including classification as commodities, securities, and currencies, cryptocurrencies are generally viewed as a distinct asset class in practice. Some crypto schemes use validators to maintain the cryptocurrency. In a proof-of-stake model, owners put up their tokens as collateral. In return, they get authority over the token in proportion to their stake. Generally, these token takes to get additional ownership in the token over time via network fees, newly minted tokens, or other such reward mechanisms.  Cryptocurrency does not exist in physical form and is typically not issued by a central authority. Cryptocurrencies typically use decentralized control as opposed to a central bank digital currency. When a cryptocurrency is minted, created before issuance, or issued by a single issuer, it is generally considered centralized. When implemented with decentralized control, each cryptocurrency works through distributed ledger technology, typically a blockchain, that serves as a public financial transaction database. Traditional asset classes like currencies, commodities, stocks and macroeconomic factors have modest exposures to cryptocurrency returns. The first decentralized cryptocurrency was Bitcoin, which was first released as open-source software in 2009. As of March In 2022, there were more than 9,000 other cryptocurrencies in the marketplace, of which more than 70 had a market capitalization exceeding $1 billion.",
+  "news_delete": "Not interested",
+  "news_more": "Show more",
+  "news_less": "Show less",
+  "profile_name": "David Chaum",
+  "profile_born": "Born: 1955",
+  "profile_edu": "Education:",
+  "profile_uni": "University of California, Berkeley",
+  "profile_pro": "Occupations:",
+  "profile_pro1": "Inventor",
+  "profile_pro2": "Cryptographer",
+  "profile_body": "Chaum is Jewish and was born to a Jewish family in Los Angeles. He gained a doctorate in computer science from the University of California, Berkeley in 1982. Also that year, he founded the International Association for Cryptologic Research, which currently organizes academic conferences in cryptography research. Subsequently, he taught at the New York University Graduate School of Business Administration and the University of California, Santa Barbara. He also formed a cryptography research group at CWI, the Dutch National Research Institute for Mathematics and Computer Science in Amsterdam. He founded DigiCash, an electronic cash company, in 1990. Chaum received the Information Technology European Award in 1995. In 2004, he was named an IACR Fellow. In 2010, he received during the RSA Conference the RSA Award for Excellence in Mathematics. In 2019, he was awarded the honorary title of Dijkstra Fellow by CWI. He received an honorary doctorate from the University of Lugano in 2021."
+}
