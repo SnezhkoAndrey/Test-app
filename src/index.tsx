@@ -5,10 +5,10 @@ import { store } from "./redux/store";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
-import "./18next";
+import "./i18next";
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
@@ -16,11 +16,11 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Toaster />
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <App />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
 
