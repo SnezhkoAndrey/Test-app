@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { Container } from "@mui/material";
 import Header from "./components/Header";
 import AppRoutes from "./AppRoutes";
+import { Container } from "@mui/material";
 import { Stack } from "@mui/material";
 import toast from "react-hot-toast";
 import { styledError } from "./styles/styleError";
-import { useAppSelector } from "./hooks/hooks";
+import { useAppSelector } from "./hooks/dispatchSelectorHooks";
 import { selectError } from "./redux/newsSlice";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
   }, [error]);
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" sx={{ padding: 0 }}>
       <Header />
       <Stack
         textAlign={"center"}

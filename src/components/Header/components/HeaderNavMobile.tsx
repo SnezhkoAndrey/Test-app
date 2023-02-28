@@ -3,6 +3,7 @@ import { Box, Button, Menu } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import HeaderNavLinkMobile from "./HeaderNavLinkMobile";
 import { useTranslation } from "react-i18next";
+import MenuLayout from "./MenuLayout";
 
 const HeaderNavMobile = () => {
   const { t } = useTranslation();
@@ -21,7 +22,28 @@ const HeaderNavMobile = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Button
+      <MenuLayout
+        childButton={<MenuIcon />}
+        childMenuTop={
+          <HeaderNavLinkMobile
+            linkTo="/"
+            name={t("header_home")}
+            handleClose={handleClose}
+          />
+        }
+        childMenuBottom={
+          <HeaderNavLinkMobile
+            linkTo="/news"
+            name={t("header_news")}
+            handleClose={handleClose}
+          />
+        }
+        anchorEl={anchorEl}
+        open={open}
+        handleClick={handleClick}
+        handleClose={handleClose}
+      />
+      {/* <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
         aria-haspopup="true"
@@ -50,7 +72,7 @@ const HeaderNavMobile = () => {
           name={t("header_news")}
           handleClose={handleClose}
         />
-      </Menu>
+      </Menu> */}
     </Box>
   );
 };

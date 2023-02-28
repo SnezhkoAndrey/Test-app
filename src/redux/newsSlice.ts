@@ -23,7 +23,7 @@ export const newsSlice = createSlice({
         ...state.news.filter((post) => post.title !== action.payload),
       ];
     },
-    setLoadingData: (state, action: PayloadAction<boolean>) => {
+    setLoading: (state, action: PayloadAction<boolean>) => {
       state.loadingData = action.payload;
     },
     setError: (state, action: PayloadAction<string>) => {
@@ -32,14 +32,13 @@ export const newsSlice = createSlice({
   },
 });
 
-export const { setNews, removeNews, setLoadingData, setError } =
-  newsSlice.actions;
+export const { setNews, removeNews, setLoading, setError } = newsSlice.actions;
 
 export const selectNews = (state: RootState) => state.news.news;
 export const loadingData = (state: RootState) => state.news.loadingData;
 export const selectError = (state: RootState) => state.news.error;
 
-export const getNewsData = (): AppThunk => async (dispatch, getState) => {
+export const setNewsData = (): AppThunk => async (dispatch, getState) => {
   try {
     dispatch(setLoadingData(true));
     const response = await GET("/news/top/20");
@@ -51,11 +50,11 @@ export const getNewsData = (): AppThunk => async (dispatch, getState) => {
   }
 };
 
-export const getLoadingData =
+export const setLoadingData =
   (loading: boolean): AppThunk =>
   (dispatch, getState) => {
     try {
-      dispatch(setLoadingData(loading));
+      dispatch(setLoading(loading));
     } catch (error: any) {
       dispatch(setError(error.message));
     }

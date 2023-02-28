@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState, AppThunk } from "./store";
 import { SubmitType } from "../types/types";
-import { NavigateFunction } from "react-router-dom";
 import { setError } from "./newsSlice";
 
 const initialState = {
@@ -32,7 +31,7 @@ export const selectAuth = (state: RootState) => state.auth.auth;
 export const selectFailAuth = (state: RootState) => state.auth.authFail;
 export const selectLoadingAuth = (state: RootState) => state.auth.loadingAuth;
 
-export const getAuthData =
+export const setAuthData =
   (complete: boolean): AppThunk =>
   (dispatch, getState) => {
     try {
@@ -42,7 +41,7 @@ export const getAuthData =
     }
   };
 
-export const getFailAuthData =
+export const setFailAuthData =
   (fail: boolean): AppThunk =>
   (dispatch, getState) => {
     try {
@@ -52,7 +51,7 @@ export const getFailAuthData =
     }
   };
 
-export const getLoadingAuthData =
+export const setLoadingAuthData =
   (loading: boolean): AppThunk =>
   (dispatch, getState) => {
     try {
@@ -63,28 +62,26 @@ export const getLoadingAuthData =
   };
 
 export const authProccess =
-  (submitValue: SubmitType, navigate: NavigateFunction): AppThunk =>
+  (submitValue: SubmitType, onAuthSuccess: () => void): AppThunk =>
   (dispatch, getState) => {
     try {
-      dispatch(getLoadingAuthData(true));
-      if (submitValue.username === "admin") {
-        if (submitValue.password === "12345") {
-          localStorage.setItem("auth", JSON.stringify(submitValue));
-          dispatch(getAuthData(true));
-          dispatch(getFailAuthData(false));
-          dispatch(getLoadingAuthData(false));
-          navigate("/profile");
-        } else {
-          dispatch(getFailAuthData(true));
-          dispatch(getLoadingAuthData(false));
-        }
+      dispatch(setLoadingAuthData(true));
+      if (
+        submitValue.username === "admin" &&
+        submitValue.password === "12345"
+      ) {
+        localStorage.setItem("auth", JSON.stringify(submitValue));
+        dispatch(setAuthData(true));
+        dispatch(setFailAuthData(false));
+        dispatch(setLoadingAuthData(false));
+        onAuthSuccess();
       } else {
-        dispatch(getFailAuthData(true));
-        dispatch(getLoadingAuthData(false));
+        dispatch(setFailAuthData(true));
+        dispatch(setLoadingAuthData(false));
       }
     } catch (error: any) {
       dispatch(setError(error.message));
-      dispatch(getLoadingAuthData(false));
+      dispatch(setLoadingAuthData(false));
     }
   };
 
