@@ -12,14 +12,14 @@ const HomePage = () => {
         <Stack spacing={2} sx={{ margin: 2 }}>
           <Typography
             variant="h5"
-            component="div"
+            component="p"
             fontSize={{ xs: 20, sm: 25, md: 25 }}
           >
             {t("home_title")}
           </Typography>
           <Typography
             variant="h6"
-            component="div"
+            component="p"
             fontSize={{ xs: 15, sm: 20, md: 20 }}
           >
             {t("home_body")}

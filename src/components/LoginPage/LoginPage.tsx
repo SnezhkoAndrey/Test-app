@@ -23,7 +23,7 @@ const LoginPage = () => {
   const loading = useAppSelector(selectLoadingAuth);
 
   const dispatch = useAppDispatch();
-  const getAuthProccess = (
+  const setAuthProccess = (
     submitValue: SubmitType,
     onAuthSuccess: () => void
   ) => {
@@ -46,7 +46,7 @@ const LoginPage = () => {
   const { handleSubmit } = methods;
 
   const onSubmit = (submitValue: SubmitType) => {
-    getAuthProccess(submitValue, onAuthSuccess);
+    setAuthProccess(submitValue, onAuthSuccess);
   };
 
   return (
@@ -67,7 +67,7 @@ const LoginPage = () => {
           id="password"
         />
         {authFail ? (
-          <Typography variant="h6" component="div" fontSize={12} color="error">
+          <Typography variant="h6" component="p" fontSize={12} color="error">
             {t("login_error")}
           </Typography>
         ) : null}

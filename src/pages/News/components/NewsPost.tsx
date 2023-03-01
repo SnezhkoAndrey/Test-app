@@ -17,13 +17,15 @@ const NewsPost = ({ post }: PropsType) => {
     dispatch(removeNewsData(title));
   };
 
+  const date = new Date(post.date);
+
   return (
     <Paper sx={{ padding: 2, width: "100%" }}>
       <Stack spacing={2}>
         <Link href={post.url} color="inherit" title="Learn more">
           <Typography
             variant="h5"
-            component="div"
+            component="p"
             fontSize={{ xs: 17, sm: 22, md: 22 }}
           >
             {post.title}
@@ -31,7 +33,7 @@ const NewsPost = ({ post }: PropsType) => {
         </Link>
         <Typography
           variant="h6"
-          component="div"
+          component="p"
           fontSize={{ xs: 15, sm: 20, md: 20 }}
         >
           {post.description}
@@ -43,10 +45,10 @@ const NewsPost = ({ post }: PropsType) => {
         >
           <Typography
             variant="h6"
-            component="div"
+            component="p"
             fontSize={{ xs: 12, md: 15, sm: 15 }}
           >
-            {post.date.split(" ").slice(0, 5).join(" ")}
+            {date.toLocaleString()}
           </Typography>
           <Button
             onClick={() => {

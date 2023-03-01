@@ -24,14 +24,14 @@ const Profile = () => {
           <Stack direction={"column"} alignItems={"start"}>
             <Typography
               variant="h5"
-              component="div"
+              component="p"
               fontSize={{ xs: 20, sm: 25, md: 25 }}
             >
               {t("profile_name")}
             </Typography>
             <Typography
               variant="h6"
-              component="div"
+              component="p"
               fontSize={{ xs: 15, sm: 20, md: 20 }}
             >
               {t("profile_born")}
@@ -39,14 +39,14 @@ const Profile = () => {
             <Stack direction={"row"} spacing={1} alignItems={"start"}>
               <Typography
                 variant="h6"
-                component="div"
+                component="p"
                 fontSize={{ xs: 15, sm: 20, md: 20 }}
               >
                 {t("profile_edu")}
               </Typography>
               <Typography
                 variant="h6"
-                component="div"
+                component="p"
                 fontSize={{ xs: 15, sm: 20, md: 20 }}
                 textAlign={"start"}
               >
@@ -56,7 +56,7 @@ const Profile = () => {
             <Stack direction={"row"} spacing={1}>
               <Typography
                 variant="h6"
-                component="div"
+                component="p"
                 fontSize={{ xs: 15, sm: 20, md: 20 }}
               >
                 {t("profile_pro")}
@@ -64,14 +64,14 @@ const Profile = () => {
               <Stack direction={"column"} alignItems={"start"}>
                 <Typography
                   variant="h6"
-                  component="div"
+                  component="p"
                   fontSize={{ xs: 15, sm: 20, md: 20 }}
                 >
                   {t("profile_pro1")}
                 </Typography>
                 <Typography
                   variant="h6"
-                  component="div"
+                  component="p"
                   fontSize={{ xs: 15, sm: 20, md: 20 }}
                 >
                   {t("profile_pro2")}
@@ -84,7 +84,7 @@ const Profile = () => {
       <Paper>
         <Typography
           variant="h6"
-          component="div"
+          component="p"
           fontSize={{ xs: 15, sm: 20, md: 20 }}
           sx={{ margin: 2 }}
         >

@@ -1,5 +1,5 @@
-import React, { Suspense, useEffect } from "react";
-import { Route, useNavigate } from "react-router";
+import React, { Suspense } from "react";
+import { Route } from "react-router";
 import { Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Loader from "./components/Loader";

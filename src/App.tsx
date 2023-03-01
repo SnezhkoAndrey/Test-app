@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Header from "./components/Header";
 import AppRoutes from "./AppRoutes";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { Stack } from "@mui/material";
 import toast from "react-hot-toast";
 import { styledError } from "./styles/styleError";
@@ -18,16 +18,18 @@ function App() {
   }, [error]);
 
   return (
-    <Container maxWidth="lg" sx={{ padding: 0 }}>
+    <Box>
       <Header />
-      <Stack
-        textAlign={"center"}
-        bgcolor={"#E5E5E5"}
-        sx={{ mt: 1, mb: 1, height: "content" }}
-      >
-        <AppRoutes />
-      </Stack>
-    </Container>
+      <Container maxWidth="lg" sx={{ padding: 0 }}>
+        <Stack
+          textAlign={"center"}
+          bgcolor={"#E5E5E5"}
+          sx={{ minHeight: "calc(100vh - 64px)" }}
+        >
+          <AppRoutes />
+        </Stack>
+      </Container>
+    </Box>
   );
 }
 

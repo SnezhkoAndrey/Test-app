@@ -4,9 +4,7 @@ import {
   useAppSelector,
 } from "../../hooks/dispatchSelectorHooks";
 import { setNewsData, loadingData, selectNews } from "../../redux/newsSlice";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
+import { Stack, Button } from "@mui/material";
 import Loader from "../../components/Loader";
 import { useTranslation } from "react-i18next";
 import NewsPost from "./components/NewsPost";
@@ -17,13 +15,13 @@ const News = () => {
   const loading = useAppSelector(loadingData);
 
   const dispatch = useAppDispatch();
-  const getNews = () => {
+  const setNews = () => {
     dispatch(setNewsData());
   };
 
   const news = useAppSelector(selectNews);
   useEffect(() => {
-    getNews();
+    setNews();
   }, []);
 
   const [showMore, setShowMore] = useState(false);
@@ -37,7 +35,7 @@ const News = () => {
       spacing={2}
       sx={{ width: "80%", margin: "15px auto" }}
     >
-      <Box>{loading ? <Loader /> : null}</Box>
+      {loading ? <Loader /> : null}
       {news.slice(0, numberOfItems).map((post, index) => (
         <NewsPost key={index} post={post} />
       ))}

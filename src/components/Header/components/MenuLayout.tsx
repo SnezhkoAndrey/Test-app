@@ -1,10 +1,8 @@
 import { Button, Menu } from "@mui/material";
-import { useState } from "react";
 
 interface PropsType {
-  childButton: React.ReactNode;
-  childMenuTop: React.ReactNode;
-  childMenuBottom?: React.ReactNode;
+  buttonElement: React.ReactNode;
+  children: React.ReactNode;
   anchorEl: null | HTMLElement;
   open: boolean;
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -12,9 +10,8 @@ interface PropsType {
 }
 
 const MenuLayout = ({
-  childButton,
-  childMenuTop,
-  childMenuBottom,
+  buttonElement,
+  children,
   anchorEl,
   open,
   handleClick,
@@ -30,7 +27,7 @@ const MenuLayout = ({
         onClick={handleClick}
         color={"inherit"}
       >
-        {childButton}
+        {buttonElement}
       </Button>
       <Menu
         id="basic-menu"
@@ -41,8 +38,7 @@ const MenuLayout = ({
           "aria-labelledby": "basic-button",
         }}
       >
-        {childMenuTop}
-        {childMenuBottom}
+        {children}
       </Menu>
     </>
   );
