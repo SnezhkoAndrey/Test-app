@@ -5,9 +5,9 @@ import {
 } from "../../hooks/dispatchSelectorHooks";
 import { setNewsData, loadingData, selectNews } from "../../redux/newsSlice";
 import { Stack, Button } from "@mui/material";
-import Loader from "../../components/Loader";
 import { useTranslation } from "react-i18next";
 import NewsPost from "./components/NewsPost";
+import Loader from "../../components/Loader";
 
 const News = () => {
   const { t } = useTranslation();

@@ -20,7 +20,7 @@ function App() {
   return (
     <Box>
       <Header />
-      <Container maxWidth="lg" sx={{ padding: 0 }}>
+      <Container maxWidth="lg" sx={{ padding: { xs: 0, sm: 0, md: 0 } }}>
         <Stack
           textAlign={"center"}
           bgcolor={"#E5E5E5"}
